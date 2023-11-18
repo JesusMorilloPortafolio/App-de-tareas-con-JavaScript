@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión My to-do list (Jesus Morillo)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style2.css"> <!-- Enlace al archivo CSS -->
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h2>Iniciar sesión</h2>
+
+    <form id="loginForm" onsubmit="validarCredenciales(event)">
+      <div class="username">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+      </div>
+      <div class="username">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+      </div>
+      <div class="recordar">¿Olvidaste tu contraseña?</div>
+      <div>
+        <input type="submit" value="Iniciar sesión">
+      </div>
+      
+    </form>
+  </div>
+
+  <script>
+    function validarCredenciales(event) {
+      event.preventDefault(); // Evitar el envío del formulario por defecto
+
+      // Obtener los valores del usuario y la contraseña
+      const usuario = document.getElementById('usuario').value;
+      const contrasena = document.getElementById('contrasena').value;
+
+      // Verificar las credenciales (usuario1 y 123456789)
+      if (usuario === 'usuario1' && contrasena === '123456789') {
+        // Redireccionar a la siguiente página
+        window.location.href = 'index.html';
+      } else {
+        alert('Credenciales incorrectas. Inténtalo de nuevo.');
+      }
+    }
+  </script>
+
+
+
+</body>
+
+</html>

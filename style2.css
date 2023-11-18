@@ -1,0 +1,130 @@
+
+
+:root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+    --black: #000000;
+}
+
+body {
+    background: linear-gradient(to top, rgba(30, 35, 38, 0.8), rgba(30, 35, 38, 1)),
+        url('img/portada1.png');
+    background-size: cover;
+    height: 100vh;
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; /* Cambié el valor a un tamaño específico en píxeles */
+    max-width: 90%; /* Agregué una máxima anchura del 90% para hacerlo responsivo */
+   
+    background-color: var(--white); /* Usé la variable definida para el color blanco */
+    opacity: 0.5; /* Opacidad del contenedor */
+    border-radius: 10px;
+    padding: 20px; /* Agregué relleno para separar el contenido del borde */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra difuminada */
+    
+    opacity: 1;
+    
+}
+
+
+.container h2 {
+    text-align: center;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid silver;
+    font-size: 34px;
+    
+}
+
+.container form {
+    padding: 0 40px;
+    box-sizing: border-box;
+    
+}
+
+form .username {
+    position: relative;
+    margin: 30px 0;
+}
+
+.username input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px; /* Quité el espacio entre '16' y 'px' */
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid silver; /* Agregué un borde inferior */
+}
+
+
+.username label{
+    position: absolute;
+    top: -19%;
+    left: 5px;
+    color:  #383838;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+    
+
+}
+
+.username span ::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #9a67ea;
+
+}
+
+.recordar{
+    margin: -5px 0 20px 5px;
+    color: rgb(19, 74, 253);
+    cursor: pointer;
+}
+.recordar :hover{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background-color: #383838;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+
+}
+
+input[type="submit"] {
+    border: 3px solid transparent; /* Define un borde inicial */
+    transition: border-color 0.5s ease; /* Establece la propiedad a animar en la transición */
+}
+
+input[type="submit"]:hover {
+    border-color: rgb(0, 0, 0); /* Cambia el color del borde al pasar el cursor sobre el botón */
+}
+
+
+
+
